@@ -1,0 +1,62 @@
+{
+  "corpus_metadata": {
+    "name": "Wikipedia Paragraph Index for Natural Questions Open (300 Validation Queries)",
+    "description": "Frozen 45,029 paragraph passage index covering the topic entities of the 300 sampled validation questions.",
+    "source": "English Wikipedia (Official Wikimedia Foundation Dump & Article API)",
+    "snapshot_date": "2024-01-01",
+    "language": "en",
+    "license": "CC BY-SA 4.0",
+    "total_articles": 1806,
+    "total_passages": 45029
+  },
+  "file_manifest": {
+    "corpus_file": "data/nq_open_n300_seed42.jsonl",
+    "corpus_sha256": "f148fb7c12b7a6621ce6cf24e45fe19129f73c23f86a5902627ca992c1c4fcdd",
+    "corpus_size_bytes": 39682548,
+    "questions_file": "data/sampled_questions.jsonl",
+    "questions_sha256": "5b66d582950d90c1ca730f061439b79ae46a6e74f1f933db5e50d5a219b9445a",
+    "embeddings_file": "data/dense_embeddings_45k.npy",
+    "embeddings_sha256": "6d7f22e6d57bf78764bf0a152cf291e7ced216143b0679e307ec83ce841c7fd0"
+  },
+  "article_selection_protocol": {
+    "methodology": "Question-guided topic discovery without label leakage.",
+    "discovery_rule": "Topic entities, noun phrases, and candidate Wikipedia titles were extracted solely from the question text (never from gold answer strings) across the 300 sampled validation questions.",
+    "expansion": "1-hop hyperlink neighborhood expansion covering related biographical, geographic, historical, and conceptual Wikipedia articles."
+  },
+  "paragraph_segmentation_protocol": {
+    "granularity": "Natural Wikipedia paragraph boundaries, bounded to a maximum of 200 whitespace tokens following Lewis et al. (NeurIPS 2020).",
+    "filtering": [
+      "Navigation templates, infobox boilerplate, citations ([1], [citation needed]), and maintenance tags removed.",
+      "See Also, References, External Links, and Category sections discarded.",
+      "Passages with fewer than 30 tokens filtered out to eliminate non-informative fragments."
+    ],
+    "length_distribution": {
+      "min_tokens": 30,
+      "max_tokens": 200,
+      "mean_tokens": 117.6,
+      "median_tokens": 117.0
+    }
+  },
+  "retrieval_index_specifications": {
+    "lexical_retriever": {
+      "library": "rank_bm25",
+      "algorithm": "BM25Okapi",
+      "k1": 1.5,
+      "b": 0.75,
+      "top_k_answering": 5,
+      "top_k_retrieval": 10
+    },
+    "dense_retriever": {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "dimension": 384,
+      "similarity_metric": "cosine (FAISS IndexFlatIP on L2-normalized vectors)",
+      "top_k_answering": 5,
+      "top_k_retrieval": 10
+    },
+    "hybrid_fusion": {
+      "algorithm": "Reciprocal Rank Fusion (RRF)",
+      "constant_c": 60,
+      "top_k_answering": 5
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "dataset": "google-research-datasets/nq_open",
+  "corpus_file": "data/wikipedia/nq_open_n300_seed42.jsonl",
+  "corpus_sha256": "f148fb7c12b7a6621ce6cf24e45fe19129f73c23f86a5902627ca992c1c4fcdd",
+  "metadata": {
+    "total_passages": 45029,
+    "unique_articles": 1806,
+    "sha256": "f148fb7c12b7a6621ce6cf24e45fe19129f73c23f86a5902627ca992c1c4fcdd"
+  }
+}
