@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+*.swp
+*.exe
+bin/
+
+# Assignment PDF specifications (excluded from submission repository)
+*.pdf
+*.zip
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Scratch and intermediate generation workspaces
+scratch/
+data/raw/
+data/processed/
+
+# Duplicate corpus storage in subdirectories
+data/wikipedia/*.jsonl
+data/wikipedia/*.npy

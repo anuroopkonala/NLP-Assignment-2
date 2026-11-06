@@ -1,0 +1,20 @@
+# Dataset Configuration
+dataset:
+  name: "Natural Questions (Open)"
+  identifier: "google-research-datasets/nq_open"
+  split_eval: "validation"
+  sample_size_eval: 300
+  sample_seed_eval: 42
+  sample_size_dev: 100
+  sample_seed_dev: 100
+  fields:
+    question: "question"
+    answers: "answer"
+
+corpus:
+  source: "English Wikipedia (Official Wikimedia Foundation Dump & API)"
+  snapshot_date: "2024-01-01"
+  total_passages: 45029
+  total_articles: 1806
+  max_passage_tokens: 200
+  min_passage_tokens: 30

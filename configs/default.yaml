@@ -1,0 +1,23 @@
+# CS60075 NLP Assignment II - Group 29
+# Master Configuration File for Project 10: Open-Domain Question Answering
+
+project:
+  name: "Open-Domain Question Answering: From Lexical Retrieval to RAG"
+  group_id: 29
+  project_id: 10
+  course: "CS60075 Natural Language Processing"
+  semester: "Autumn 2026"
+  institution: "IIT Kharagpur"
+  author: "Group 29"
+  random_seed: 42
+
+paths:
+  data_dir: "data"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  wikipedia_corpus: "data/wikipedia/nq_open_n300_seed42.jsonl"
+  corpus_manifest: "data/wikipedia/corpus_manifest.json"
+  dense_embeddings: "data/wikipedia/dense_embeddings_45k.npy"
+  evaluation_samples: "data/samples/sampled_questions.jsonl"
+  dev_calibration_samples: "data/samples/dev_calibration_questions.jsonl"
+  output_dir: "outputs"

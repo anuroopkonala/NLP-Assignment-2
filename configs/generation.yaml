@@ -1,0 +1,19 @@
+# Generator Configuration
+
+generator:
+  model_name: "Qwen/Qwen2.5-1.5B-Instruct"
+  torch_dtype: "float16"
+  device_map: "auto"
+  max_new_tokens: 64
+  temperature: 0.0
+  do_sample: false
+  max_passage_tokens: 200
+  top_k_passages: 5
+  prompt_template: |
+    Answer the following question directly and concisely based only on the provided context passages. Provide only the short answer.
+
+    Context:
+    {context}
+
+    Question: {question}
+    Answer:

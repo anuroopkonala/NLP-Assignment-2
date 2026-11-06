@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  open-domain-qa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - PYTHONPATH=/workspace/src:/workspace/code
+    command: python run_all.py --eval_only

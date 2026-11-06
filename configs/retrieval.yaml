@@ -1,0 +1,26 @@
+# Retrieval Configuration
+
+bm25:
+  algorithm: "BM25Okapi"
+  library: "rank_bm25"
+  k1: 1.5
+  b: 0.75
+  top_k_retrieval: 10
+  top_k_answering: 5
+  use_title_metadata: false
+
+dense:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+  batch_size: 128
+  normalize_embeddings: true
+  index_type: "IndexFlatIP"
+  metric: "cosine_similarity"
+  top_k_retrieval: 10
+  top_k_answering: 5
+
+hybrid_rrf:
+  constant_c: 60
+  bm25_candidate_pool: 10
+  dense_candidate_pool: 10
+  top_k_answering: 5
