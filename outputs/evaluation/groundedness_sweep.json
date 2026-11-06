@@ -1,0 +1,72 @@
+[
+  {
+    "threshold": 0.1,
+    "grounded_count": 285,
+    "acceptance_rate": 0.95,
+    "accepted_precision": 0.2807,
+    "hallucination_rejection_rate": 0.0682
+  },
+  {
+    "threshold": 0.2,
+    "grounded_count": 285,
+    "acceptance_rate": 0.95,
+    "accepted_precision": 0.2807,
+    "hallucination_rejection_rate": 0.0682
+  },
+  {
+    "threshold": 0.3,
+    "grounded_count": 285,
+    "acceptance_rate": 0.95,
+    "accepted_precision": 0.2807,
+    "hallucination_rejection_rate": 0.0682
+  },
+  {
+    "threshold": 0.4,
+    "grounded_count": 284,
+    "acceptance_rate": 0.9467,
+    "accepted_precision": 0.2817,
+    "hallucination_rejection_rate": 0.0727
+  },
+  {
+    "threshold": 0.5,
+    "grounded_count": 284,
+    "acceptance_rate": 0.9467,
+    "accepted_precision": 0.2817,
+    "hallucination_rejection_rate": 0.0727
+  },
+  {
+    "threshold": 0.6,
+    "grounded_count": 281,
+    "acceptance_rate": 0.9367,
+    "accepted_precision": 0.2847,
+    "hallucination_rejection_rate": 0.0864
+  },
+  {
+    "threshold": 0.7,
+    "grounded_count": 280,
+    "acceptance_rate": 0.9333,
+    "accepted_precision": 0.2857,
+    "hallucination_rejection_rate": 0.0909
+  },
+  {
+    "threshold": 0.8,
+    "grounded_count": 280,
+    "acceptance_rate": 0.9333,
+    "accepted_precision": 0.2857,
+    "hallucination_rejection_rate": 0.0909
+  },
+  {
+    "threshold": 0.9,
+    "grounded_count": 280,
+    "acceptance_rate": 0.9333,
+    "accepted_precision": 0.2857,
+    "hallucination_rejection_rate": 0.0909
+  },
+  {
+    "threshold": 1.0,
+    "grounded_count": 279,
+    "acceptance_rate": 0.93,
+    "accepted_precision": 0.2867,
+    "hallucination_rejection_rate": 0.0955
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "dataset": "google-research-datasets/nq_open",
+  "sample_size": 300,
+  "corpus_size": 45029,
+  "task": "Task 1 - Classical Lexical Retrieve-and-Extract",
+  "parameters": {
+    "retriever": "BM25Okapi",
+    "k1": 1.5,
+    "b": 0.75,
+    "top_k_retrieval": 10,
+    "top_k_answering": 5,
+    "extractor": "longest_noun_phrase_or_number_span"
+  },
+  "metrics": {
+    "exact_match": 0.0067,
+    "token_f1": 0.031,
+    "recall@1": 0.3067,
+    "recall@3": 0.45,
+    "recall@5": 0.5167,
+    "recall@10": 0.63
+  }
+}

@@ -1,0 +1,4 @@
+Task_ID,Pipeline_Name,Retriever,Reader,Exact_Match_pct,Token_F1_pct,Recall_at_1_pct,Recall_at_3_pct,Recall_at_5_pct,Recall_at_10_pct,Groundedness_Accuracy_pct
+Task 1,Classical BM25 + Heuristic Extraction,"BM25Okapi (k1=1.5, b=0.75)",Syntactic NP / Number Extractor,0.67,3.1,30.67,45.0,51.67,63.0,N/A
+Task 2,Dense RAG (Paper Reproduction),all-MiniLM-L6-v2 + FAISS IndexFlatIP,"Qwen2.5-1.5B-Instruct (greedy, temp=0)",28.67,37.57,34.67,53.33,60.33,69.33,N/A
+Task 3,Hybrid RRF + Groundedness Verification,Reciprocal Rank Fusion (c=60),Qwen2.5-1.5B-Instruct + Overlap Filter (tau=0.5),26.67,36.0,36.0,52.67,61.0,67.33,32.0

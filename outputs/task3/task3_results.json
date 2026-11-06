@@ -1,0 +1,29 @@
+{
+  "dataset": "google-research-datasets/nq_open",
+  "sample_size": 300,
+  "corpus_size": 45029,
+  "task": "Task 3 - Hybrid Retrieval with Groundedness Verification",
+  "parameters": {
+    "fusion_method": "Reciprocal Rank Fusion (RRF)",
+    "rrf_constant": 60,
+    "top_k_retrieval": 10,
+    "top_k_answering": 5,
+    "passage_max_tokens": 200,
+    "generator": "Qwen/Qwen2.5-1.5B-Instruct",
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "overlap_threshold": 0.5,
+    "overlap_metric": "unigram_token_intersection_over_answer_tokens"
+  },
+  "metrics": {
+    "exact_match": 0.2667,
+    "token_f1": 0.36,
+    "recall@1": 0.36,
+    "recall@3": 0.5267,
+    "recall@5": 0.61,
+    "recall@10": 0.6733,
+    "groundedness_check_accuracy": 0.32,
+    "frac_correct_high_overlap": 1.0,
+    "frac_incorrect_low_overlap": 0.0727
+  }
+}

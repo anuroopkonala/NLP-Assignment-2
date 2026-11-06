@@ -1,0 +1,125 @@
+{
+  "project": "Project 10: Open-Domain Question Answering - From Lexical Retrieval to RAG",
+  "course": "CS60075 Natural Language Processing, Autumn 2026, IIT Kharagpur",
+  "corpus": {
+    "dataset": "google-research-datasets/nq_open",
+    "validation_questions": 300,
+    "seed": 42,
+    "wikipedia_passages": 45029
+  },
+  "task1_bm25_ablation": {
+    "text_only": {
+      "exact_match": 0.0067,
+      "token_f1": 0.0318,
+      "recall@1": 0.2767,
+      "recall@3": 0.4367,
+      "recall@5": 0.5067,
+      "recall@10": 0.5933
+    },
+    "title_aware": {
+      "exact_match": 0.0033,
+      "token_f1": 0.0255,
+      "recall@1": 0.2733,
+      "recall@3": 0.44,
+      "recall@5": 0.5067,
+      "recall@10": 0.6167
+    }
+  },
+  "task2_generator_ablation": {
+    "zero_shot_instruction": {
+      "exact_match": 0.2867,
+      "token_f1": 0.3757,
+      "recall@1": 0.3467,
+      "recall@3": 0.5333,
+      "recall@5": 0.6033,
+      "recall@10": 0.6933
+    },
+    "few_shot_exemplars": {
+      "exact_match": 0.2467,
+      "token_f1": 0.3554,
+      "notes": "3 in-context exemplars from official NQ train split pool"
+    }
+  },
+  "task3_hybrid_fusion_ablation": {
+    "text_bm25_plus_dense_rrf": {
+      "exact_match": 0.2667,
+      "token_f1": 0.36,
+      "recall@1": 0.36,
+      "recall@3": 0.5267,
+      "recall@5": 0.61,
+      "recall@10": 0.6733
+    },
+    "title_bm25_plus_dense_rrf": {
+      "recall@1": 0.3567,
+      "recall@3": 0.5167,
+      "recall@5": 0.61,
+      "recall@10": 0.6733
+    }
+  },
+  "task3_groundedness_threshold_sweep": [
+    {
+      "tau": 0.1,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 6.82,
+      "groundedness_accuracy_pct": 31.67
+    },
+    {
+      "tau": 0.2,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 6.82,
+      "groundedness_accuracy_pct": 31.67
+    },
+    {
+      "tau": 0.3,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 6.82,
+      "groundedness_accuracy_pct": 31.67
+    },
+    {
+      "tau": 0.4,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 7.27,
+      "groundedness_accuracy_pct": 32.0
+    },
+    {
+      "tau": 0.5,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 7.27,
+      "groundedness_accuracy_pct": 32.0
+    },
+    {
+      "tau": 0.6,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 8.64,
+      "groundedness_accuracy_pct": 33.0
+    },
+    {
+      "tau": 0.7,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 9.09,
+      "groundedness_accuracy_pct": 33.33
+    },
+    {
+      "tau": 0.8,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 9.09,
+      "groundedness_accuracy_pct": 33.33
+    },
+    {
+      "tau": 0.9,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 9.09,
+      "groundedness_accuracy_pct": 33.33
+    },
+    {
+      "tau": 1.0,
+      "correct_high_overlap_pct": 100.0,
+      "incorrect_low_overlap_pct": 9.55,
+      "groundedness_accuracy_pct": 33.67
+    }
+  ],
+  "assignment": {
+    "group": 29,
+    "project": 10
+  }
+}

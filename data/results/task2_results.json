@@ -1,0 +1,25 @@
+{
+  "dataset": "google-research-datasets/nq_open",
+  "sample_size": 300,
+  "corpus_size": 45029,
+  "task": "Task 2 - Dense Retrieval-Augmented Generation (RAG)",
+  "parameters": {
+    "retriever": "sentence-transformers/all-MiniLM-L6-v2",
+    "similarity_metric": "cosine (IndexFlatIP with normalized vectors)",
+    "top_k_retrieval": 10,
+    "top_k_answering": 5,
+    "passage_max_tokens": 200,
+    "generator": "Qwen/Qwen2.5-1.5B-Instruct",
+    "max_new_tokens": 64,
+    "temperature": 0.0,
+    "device": "cuda"
+  },
+  "metrics": {
+    "exact_match": 0.2867,
+    "token_f1": 0.3757,
+    "recall@1": 0.3467,
+    "recall@3": 0.5333,
+    "recall@5": 0.6033,
+    "recall@10": 0.6933
+  }
+}

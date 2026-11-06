@@ -1,0 +1,4 @@
+Task,Exact Match (%),Token F1 (%),Recall@1 (%),Recall@3 (%),Recall@5 (%),Recall@10 (%)
+Task 1 (BM25 + Extractive),0.67,3.1,30.67,45.0,51.67,63.0
+Task 2 (Dense RAG Zero-Shot),28.67,37.57,34.67,53.33,60.33,69.33
+Task 3 (Hybrid RRF + Groundedness),26.67,36.0,36.0,52.67,61.0,67.33
